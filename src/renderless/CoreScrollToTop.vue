@@ -7,6 +7,10 @@ export default {
             type: String,
             default: null,
         },
+        direction: {
+            type: String,
+            default: 'left',
+        },
     },
 
     data: () => ({
@@ -52,6 +56,7 @@ export default {
     render() {
         return this.$scopedSlots.default({
             visible: this.visible,
+            direction: this.direction,
             type: this.type,
             controlEvents: {
                 click: this.scroll,

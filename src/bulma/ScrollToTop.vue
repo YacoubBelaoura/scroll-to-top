@@ -1,9 +1,9 @@
 <template>
     <core-scroll-to-top v-bind="$attrs">
-        <template v-slot:default="{ visible, type, controlEvents }">
+        <template v-slot:default="{ visible, type, controlEvents, direction }">
             <zoom>
                 <div class="button scroll-control"
-                    :class="type"
+                    :class="[type, direction]"
                     v-on="controlEvents"
                     v-if="visible">
                     <span class="icon is-large">
@@ -30,11 +30,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
     .scroll-control {
         z-index: 3;
         position: fixed;
         bottom: 2em;
-        right: 1.5em;
+        &.left{
+            right: 1.5em;
+         }
+        &.right{
+            left: 1.5em;
+         }
     }
 </style>
