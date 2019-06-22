@@ -2,11 +2,13 @@
     <core-scroll-to-top v-bind="$attrs">
         <template v-slot:default="{ visible, type, controlEvents }">
             <zoom>
-                <div class="button scroll-control"
+                <!-- <div class="button scroll-control" -->
+                <div class="button scroll-control rounded shadow-md text-white cursor-pointer hover:bg-teal-500  bg-teal-400"
                     :class="type"
                     v-on="controlEvents"
                     v-if="visible">
-                    <span class="icon is-large">
+                    <!-- <span class="icon is-large"> -->
+                    <span class="icon is-large text-xl">
                         <fa icon="arrow-alt-circle-up"/>
                     </span>
                 </div>
