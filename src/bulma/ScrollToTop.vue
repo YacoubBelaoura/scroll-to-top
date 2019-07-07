@@ -3,7 +3,7 @@
         <template v-slot:default="{ visible, type, controlEvents }">
             <zoom>
                 <!-- <div class="button scroll-control" -->
-                <div class="button scroll-control rounded shadow-md text-white cursor-pointer hover:bg-teal-500  bg-teal-400"
+                <div class="button scroll-control h-10 w-10 shadow-md text-white hover:text-white hover:border-gray-200 bg-teal-400 hover:bg-teal-500  "
                     :class="type"
                     v-on="controlEvents"
                     v-if="visible">
